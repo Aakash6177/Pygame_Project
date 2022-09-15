@@ -14,8 +14,8 @@ screen = pygame.display.set_mode((1280,720))
 clock = pygame.time.Clock()
 while True:
     for event in pygame.event.get():
-        if (event.type == pygame.QUIT):
-            pygame.quit()
+        if (event.type == pygame.QUIT): # this allows pygame to listen for all the events happening on the window
+            pygame.quit() # this will listen for the event for you to quit the window
             sys.exit()
     land_position_y -= 1
 
@@ -28,5 +28,5 @@ while True:
     screen.blit(cloud_2,(50,100))
     
     pygame.display.update()
-    clock.tick(120) # setting up the frame rate of the game
+    clock.tick(120) # setting up the frame rate of the game, this will also let help you animate
 
