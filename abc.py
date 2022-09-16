@@ -12,7 +12,7 @@ land_speed = 1
 water_position_y = 640
 water_speed = 2
 cloud_1_position_x = 200
-cloud_1_speed = 0.5
+cloud_1_speed = 1
 screen = pygame.display.set_mode((1280,720))
 clock = pygame.time.Clock()
 while True:
@@ -22,12 +22,13 @@ while True:
             sys.exit()
     
     water_position_y = water_position_y - water_speed
-    # cloud_1_position_x = cloud_1_position_x + cloud_1_speed
+    cloud_1_position_x = cloud_1_position_x + cloud_1_speed
     if (water_position_y < 530 or water_position_y > 650):
         water_speed = water_speed * -1
         
-    if (cloud_1_position_x < 400):
-        cloud_1_position_x = cloud_1_position_x + cloud_1_speed
+    if (cloud_1_position_x < 200 or cloud_1_position_x > 400):
+        cloud_1_speed = cloud_1_speed * -1 
+        
 
 
     screen.blit(wood_bg,(0,0))
