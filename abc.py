@@ -1,6 +1,7 @@
 import pygame
 import sys
 
+
 pygame.init()
 
 wood_bg = pygame.image.load('./shooting range assets/Wood_BG.png')
@@ -33,7 +34,7 @@ second_cloud_1_speed = 1
 
 screen = pygame.display.set_mode((1280, 720))
 clock = pygame.time.Clock()
-crosshair_rect = (640, 360)
+crosshair_rect = (0, 0)
 while True:
     for event in pygame.event.get():
         # this allows pygame to listen for all the events happening on the window
