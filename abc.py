@@ -41,6 +41,7 @@ for duck_rect in range(20):
 
     duck_rect = duck.get_rect(center = (random_x, random_y))
     duck_list.append(duck_rect)
+    print(duck_list)
 
 
 screen = pygame.display.set_mode((1280, 720))
