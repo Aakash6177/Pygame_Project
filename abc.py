@@ -1,8 +1,7 @@
-from operator import iadd
+
 import pygame
 import random
 import sys
-
 
 pygame.init()
 
@@ -43,13 +42,12 @@ screen = pygame.display.set_mode((1280, 720))
 clock = pygame.time.Clock()
 crosshair_rect = (640, 360)
 duck_list = []
-
+arr = []
 for i in range(10):
     random_x = random.randrange(50, 1200)
     random_y = random.randrange(120, 600)
     duck_rect = duck.get_rect(center=(random_x, random_y))
     duck_list.append(duck_rect)
-
 
 while True:
     for event in pygame.event.get():
